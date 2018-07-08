@@ -1,0 +1,30 @@
+<div style="width: 100%">
+  <table border="1" style="width: 100%">
+  <tbody>
+    <tr>         
+      <th style="text-align: left;color:red;">Name</th>
+      <th style="text-align: left;color:red;">Population</th>
+      <th style="text-align: left;color:red;">FlagUrl</th>
+      <th style="text-align: left;color:red;">Capital</th>
+      <th style="text-align: left;color:red;">GDP</th>
+    </tr> 
+    <tr *ngFor="let d of countryFlafData | async">
+      <td>
+        <h3>{{d.name}}</h3>
+      </td>
+      <td>
+        <h3>{{d.population}}</h3>
+      </td>
+      <td>
+        <img  style="width: 75px;height: 75px;" [src] = 'd.flagURL'> 
+      </td>
+      <td>
+        <h3>{{d.capital}}</h3>
+      </td>
+      <td>
+        <h3>{{d.gdp}}</h3>
+      </td>
+    </tr>
+  </tbody>
+  </table>
+</div>
